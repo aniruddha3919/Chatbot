@@ -1,0 +1,167 @@
+/* General styling for the body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Styling for the chatbox container */
+#chatbox {
+    width: 100%;
+    max-width: 450px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 80vh;  /* Set a fixed height */
+    overflow: hidden;
+    border: none;
+}
+
+/* Styling for the chat window (messages area) */
+#chat {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;  /* Make the chat window scrollable */
+    background-color: #f0f4f7;
+    margin-bottom: 10px;
+}
+
+/* Styling for the input area */
+#user-input, #send-btn {
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+}
+
+#user-input {
+    flex: 1;
+    margin-right: 10px;
+    border: 1px solid #d1d1d1;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding-left: 20px;
+    background-color: #f7f7f7;
+}
+
+#send-btn {
+    background-color: #2874f0;
+    color: white;
+    cursor: pointer;
+    padding: 0 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#send-btn:hover {
+    background-color: #2364d8;
+}
+
+/* Flex container for input and button */
+#input-container {
+    display: flex;
+    padding: 10px;
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Styling for chat messages */
+.chat-message {
+    padding: 12px 15px;
+    border-radius: 15px;
+    margin-bottom: 12px;
+    max-width: 75%;
+    font-size: 15px;
+    line-height: 1.5;
+    position: relative;
+    display: inline-block;
+}
+
+/* User message styling */
+.user-message {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+    margin-right: 10px;
+    color: #202020;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: right;  /* Align the text to the right */
+}
+
+/* Bot message styling */
+.bot-message {
+    background-color: #ffffff;
+    align-self: flex-start;
+    margin-left: 10px;
+    border: 1px solid #ececec;
+    color: #333;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Adding a triangle arrow for user messages */
+.user-message::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent #dcf8c6;
+    transform: translateY(-50%);
+}
+
+/* Adding a triangle arrow for bot messages */
+.bot-message::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #ffffff transparent transparent;
+    transform: translateY(-50%);
+}
+
+/* Buttons styling */
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    margin-top: 5px;
+    padding: 10px;
+    background-color: #2874f0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #2364d8;
+}
+
+/* Ensure chat scrolls properly */
+#chat::-webkit-scrollbar {
+    width: 8px;
+}
+
+#chat::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+#chat::-webkit-scrollbar-track {
+    background-color: transparent;
+}
